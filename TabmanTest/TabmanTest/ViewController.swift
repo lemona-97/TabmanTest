@@ -27,7 +27,13 @@ class ViewController: TabmanViewController {
         
         // Create bar
         let bar = TMBar.ButtonBar()
-        bar.layout.transitionStyle = .progressive // Customize
+        bar.buttons.customize { button in
+            button.tintColor = .magenta
+            button.selectedTintColor = .white
+        }
+        bar.layout.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        bar.indicator.backgroundColor = .green
+        bar.layout.transitionStyle = .none // Customize
         
         // Add to view
         addBar(bar, dataSource: self, at: .top)
