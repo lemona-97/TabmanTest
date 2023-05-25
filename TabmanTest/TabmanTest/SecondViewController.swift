@@ -12,9 +12,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
+        print("Second VC Loaded.")
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("Second VC Loaded again.")
+    }
 
     /*
     // MARK: - Navigation

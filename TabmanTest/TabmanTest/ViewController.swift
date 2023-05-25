@@ -27,7 +27,7 @@ class ViewController: TabmanViewController {
         
         // Create bar
         let bar = TMBar.ButtonBar()
-        bar.layout.transitionStyle = .snap // Customize
+        bar.layout.transitionStyle = .progressive // Customize
         
         // Add to view
         addBar(bar, dataSource: self, at: .top)
@@ -39,7 +39,16 @@ class ViewController: TabmanViewController {
 extension ViewController: PageboyViewControllerDataSource, TMBarDataSource {
     func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
         let item = TMBarItem(title: "")
-        item.title = "Page \(index)"
+        switch index {
+        case 0:
+            item.title = "메뉴"
+        case 1:
+            item.title = "신상"
+        case 2:
+            item.title = "Hot"
+        default:
+            item.title = "타이틀 미정"
+        }
         item.image = UIImage(named: "image.png")
         // ↑↑ 이미지는 이따가 탭바 형식으로 보여줄 때 사용할 것이니 "이미지가 왜 있지?" 하지말고 넘어가주세요.
         
