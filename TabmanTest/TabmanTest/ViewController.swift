@@ -55,9 +55,7 @@ extension ViewController: PageboyViewControllerDataSource, TMBarDataSource {
         default:
             item.title = "타이틀 미정"
         }
-        item.image = UIImage(named: "image.png")
-        // ↑↑ 이미지는 이따가 탭바 형식으로 보여줄 때 사용할 것이니 "이미지가 왜 있지?" 하지말고 넘어가주세요.
-        
+        	
         return item
     }
     
