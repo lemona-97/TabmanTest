@@ -1,0 +1,6 @@
+framework module Pods_TabmanTest {
+  umbrella header "Pods-TabmanTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
